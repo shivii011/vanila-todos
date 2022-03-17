@@ -1,0 +1,116 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: linear-gradient(80deg, #33ccff 0%, #cc9900 100%);
+    color: rgb(28, 28, 29);
+    font-family: 'Raleway', sans-serif;
+    min-height: 100vh;
+}
+header{
+    font-size: 1.5rem;
+}
+header,form{
+    min-height: 20vh;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    /* display: flex; */
+
+}
+form input ,form button {
+padding:.5rem;
+font-size:2rem;
+border:none;
+background-color: white;
+}
+form button{
+    color:#cc9900;
+    background-color:white;
+    cursor: pointer;
+    transition: all .33s ease ;
+
+}
+form button:hover {
+    background-color: #cc9900;
+    color:white ;
+
+}
+.todo-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.todo-list{
+ min-width: 30%;
+ list-style: none;
+}  
+.todo{
+    margin:.5rem;
+    background-color: white;
+    color :black;
+    display: flex;
+    font-size:1.5rem;
+    justify-content: space-between;
+    align-items: center;
+    transition: all .5s ease;
+}
+.todo li{
+    flex:1
+}
+.trash-btn ,
+.completed-btn{
+    background-color: #cc9900;
+    color: white;
+    border: none;
+    padding: 1rem; 
+    cursor: pointer;
+    font-size: 1rem;
+}
+.completed-btn{
+    background-color: rgb(101, 221, 101);
+}
+.todo-item{
+ padding:0rem .5rem;
+}
+.fa-trash,.fa-check{
+    pointer-events: none;
+}
+.completed{
+    text-decoration: line-through;
+    opacity: .5;
+}
+.fall{
+transform: translateX(8rem) rotateZ(20deg);
+opacity: 0;
+}    
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: none;
+}
+.select{
+    margin: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+select{
+    color:#cc9900;
+    width:10rem;
+    cursor: pointer;
+    padding: 1rem;
+    margin: 1rem;
+}
+.select::after{
+    content: "\25BC";
+    position: absolute;
+    background-color: #cc9900;
+    top:0;
+    right:0;
+    padding:1rem;
+    pointer-events: none;
+    transition: all .3s ease;
+}
